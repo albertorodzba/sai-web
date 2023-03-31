@@ -1,0 +1,155 @@
+
+.mainDiv
+{
+    margin-left: 3%;
+    margin-right: 5%;
+    background: white;
+}
+
+
+
+a:-webkit-any-link {
+   /* color: -webkit-link;*/
+    cursor: pointer;
+}
+
+/*CONFIG BUTTON AND SEARCH INPUT*/
+
+.containerCS
+{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display: flex;
+
+}
+
+.containerCS > button 
+{
+    font-size: 15px;
+    margin-left: 5%;
+    width: 15%;
+    height: 50%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    border-radius: 5px;
+   /* background: rgba(20, 250, 77, 0.952);*/
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 19.5px );
+    -webkit-backdrop-filter: blur( 19.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    
+}
+
+.addBtn:hover
+{
+
+
+    border-radius: 5px;
+    background: rgba(20, 197, 64, 0.952);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 19.5px );
+    -webkit-backdrop-filter: blur( 19.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    
+}
+
+
+
+
+.boxTable
+{
+    overflow-x: auto;
+    overflow-y: auto;
+    position: relative;
+    max-height: 80%;
+    height: fit-content;
+    border-radius: 1px;
+}
+
+table
+{
+    overflow-x: auto;
+    overflow-y: auto;
+    border: 1px solid black;
+    width: 100%;
+    border-collapse: collapse;
+    height: fit-content;
+    table-layout: fixed;
+}
+
+@media only screen and (max-width: 600px) {
+    table {
+      table-layout: auto;
+    }
+  }
+
+
+th, td 
+{
+    border: 1px solid white;
+    border-collapse: collapse;
+    padding: 8px;
+    line-height: 1.42;
+    word-wrap:break-word;
+}
+.tdDescription
+{
+    width: 17%;
+}
+
+.btnActions 
+{
+    width: 6%;
+}
+
+.buttonDelete
+{
+    color: red;
+}
+
+.buttonEdit
+{
+    color: orange;
+}
+
+.buttonView
+{
+    color: blue;;
+}
+
+/*CONFIGURACION MODAL AGREGAR A INVENTARIO*/
+
+.input-group-text
+{
+    padding: .375rem;
+    width: 25%;
+}
+
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+@media only screen and (max-width: 1350px) {
+    table {
+      table-layout: auto;
+    }
+  }
+
+
+
+
+
+
+/*Styles to table scroll*/
+
+ 
+/* Scroll styles */
+
+
+
+

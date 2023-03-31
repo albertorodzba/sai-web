@@ -1,0 +1,92 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+        <img src="/img/icoFians.png" width="40px" alt="Logo FIANS" />
+        SAI
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+          <a class="nav-link" href="/about">Acerca</a>
+        </div>
+
+        <div class="navbar-nav ml-auto">
+          {{#if user}}
+
+            {{#if user.admin}}
+              <div class="nav-item dropdown">
+                <a class="nav-link" href="/admin">
+                  Administrador
+                </a>
+              </div>
+            {{/if}}
+
+            <div class="nav-item dropdown">
+              <a class="nav-link" href="/items">
+                Inventario
+              </a>
+            </div>
+
+            <div class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Notas
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li><a class="dropdown-item" href="/notes">Todas</a></li>
+                <li><a class="dropdown-item" href="/notes/add">Agregar</a></li>
+              </ul>
+            </div>
+
+            <div class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Sesión
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li><a class="dropdown-item" href="/users/logout">Cerrar Sesión</a></li>
+              </ul>
+            </div>
+          {{else}}
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="/users/singin"
+            >Iniciar Sesión</a>
+            <a class="nav-link" href="/users/singup">Registrar</a>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

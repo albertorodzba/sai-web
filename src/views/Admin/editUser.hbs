@@ -1,0 +1,64 @@
+<div class="row mt-5">
+  <div class="col-md-4 mx-auto">
+    <div class="card">
+      <div class="card-header">
+        <div class="d-inline-flex">
+          <h5>Editar cuenta de usuario</h5>
+          <a type="button" class="btn-close  ml-5" aria-label="Close" href="/items"></a>
+
+        </div>
+      </div>
+      <div class="card-body">
+        <form action="/admin/{{users._id}}/editU" method="POST">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              name="name"
+              placeholder="Name"
+              value="{{users.name}}"
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control"
+              name="email"
+              placeholder="Email"
+              value="{{users.email}}"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              class="form-control"
+              name="password"
+              placeholder="Password"
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="password"
+              class="form-control"
+              name="confirm_password"
+              placeholder="Confirm Password"
+            />
+          </div>
+
+          <div class="form-group">
+            <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="admin">
+            <label class="form-check-label" for="inlineCheckbox1">Administrador</label>
+            </div>
+          </div>
+
+          <button class="btn btn-primary btn-block">
+            Guardar
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

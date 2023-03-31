@@ -1,0 +1,184 @@
+body
+{
+
+    background: url('/img/background.jpeg');
+    overflow-y: hidden;
+}
+
+.logo
+{
+    width: 50%;
+}
+
+main{
+    height: 87%;
+    overflow-y: hidden;
+}
+
+
+
+table
+{
+    height: 100%;
+    overflow-y: visible;
+}
+
+.buttonEdit{
+
+    color: yellow;
+}
+
+
+
+.mainDiv{
+    height: 100%;
+    overflow-y: hidden;
+}
+
+/*Codigo para el login*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+html, body{
+    /*background-color: salmon;*/
+    /*background-image: url(/resources/meh.jpg);*/
+    background-image: url('/img/panoFians.JPG');
+    background-position-y: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+}
+
+
+#logoFiansContainer{
+    display: block;
+    margin: 1% 0 1% 1%;
+ 
+}
+
+#logoFians{
+    width: 300px;
+    height: auto;
+}
+
+
+hr{
+    border: 2px solid rgb(212, 11, 11);
+    background-color: rgb(212, 11, 11);;
+}
+
+#mainContainer{
+    display: block;
+    /*background-color: aqua;*/
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 5%;
+}
+
+#formContainer{
+    background-color: rgba(78, 78, 78, 0.267);
+    backdrop-filter: blur(7px);
+    text-align: center;
+    margin: 0 auto;
+    max-width: 300px;
+    border-radius: 10px;
+    padding: 40px 0;
+}
+
+#form{
+    margin: 0 4vh;
+}
+
+
+#logoUat{
+    width: 50%;   
+}
+
+.inputText::placeholder{
+    color: rgb(255, 253, 253);
+}
+
+.inputText{
+    width: 100%;
+    padding: 10px 0 10px 10px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid white;
+}
+
+#buttonInicioSesion{
+    width: 100%;
+    padding: 10px;
+    
+    border: rgb(212, 11, 11);
+    border-radius: 7px;
+    background: rgb(212, 11, 11);
+    color: white;
+    cursor: pointer;
+}
+
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /*background-color: blue;*/
+}
+
+a
+{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+
+input
+{
+
+    color: white;
+}
+
+
+/*Modal edit item*/
+
+#modal
+{
+    margin-top: 0%;
+    overflow-y: auto;
+}
+
+.modal-dialog
+{
+    overflow-y: visible;
+}
+
+.modal-content
+{
+    overflow-y: auto;
+}
+
+@media screen {
+    main
+    {
+        overflow: auto;
+    }
+}
+
+
+/*Style image View*/
+
+.imgView
+{
+    height: 300px;
+    
+}
+

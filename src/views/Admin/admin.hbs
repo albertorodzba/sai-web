@@ -1,0 +1,91 @@
+
+
+<div class="mainDiv my-2">
+  <div class="col-12">
+     <!--Condicional de muestreo-->
+  {{#if users}}
+    <div class="boxTable">
+      <table id="table" class="table table-bordered table-striped">
+        <thead>
+          <tr
+            style="
+                color: White;
+                /*rgb(183, 74, 83)*/
+                background-color: rgb(19, 152, 225);
+                font-weight: bold;
+              "
+          >
+            <th align="center">ID</th>
+            <th class="tdDescription">Nombre</th>
+            <th align="center">Email</th>
+            <th align="center">Administrador</th>
+            <th align="center" class="btnActions ">Vista</th>
+            <th align="center" class="btnActions ">Editar</th>
+            <th align="center" class="btnActions ">Borrar</th>
+          </tr>
+        </thead>
+        <tbody class="scroll-table">
+          {{#each users}}
+            <tr>
+              <td align="center">{{_id}}</td>
+              <td class="tdDescription">{{name}}</td>
+              <td align="center">{{email}}</td>
+              {{#if admin}}
+                <td align="center"> Si </td>
+              {{else}}
+                <td align="center"> No </td>
+              {{/if}}
+              {{!-- <td align="center">{{ubicacion}}</td>
+              <td align="center">{{resguarda}}</td> --}}
+              
+
+              <td align="center" class="btnActions ">
+                {{!-- <a class="far fa-eye buttonView " href="/items/{{_id}}/view"></a> --}}
+                <a class="far fa-eye buttonView "</a>
+              </td>
+
+              {{#if admin}}
+
+                <td>  </td>
+
+                <td>  </td>
+
+              {{else}}
+
+              <td align="center" class="btnActions ">
+                <a href="/admin/{{_id}}/editU" class="far fa-edit buttonEdit">
+                </a>
+              </td>
+              <td align="center" class="btnActions ">
+                <form
+                  action="/admin/{{_id}}/delete?_method=DELETE"
+                  method="post"
+                >
+                  <input type="hidden" name="_method" value="DELETE" />
+                  <button
+                    class="far fa-trash-alt buttonDelete"
+                    type="submit"
+                    style="border: 0px;"
+                    onclick="return confirm('¿Desea eliminar el usuario?')"
+                  ></button>
+                </form>
+
+              </td>
+              {{/if}}
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+    <!--Cierre condicional de muestreo-->
+  {{else}}
+    <div class="h-100 d-flex align-items-center justify-content-center">
+      <div class="text-center text-dark">
+        <h1>No items</h1>
+        <img src="/img/empty.svg" class="w-75" alt="Empty" />
+      </div>
+    </div>
+  {{/if}}
+</div>
+  </div>
+</div>
